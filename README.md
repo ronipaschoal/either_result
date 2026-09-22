@@ -1,4 +1,4 @@
-# result_type
+# either_result
 
 Minimal `Either<F, S>`-style `Result` type for repositories/use cases that
 need to return typed success/failure values without throwing — without
@@ -7,7 +7,7 @@ pulling in a functional-programming package (dartz, fpdart, ...).
 ## Usage
 
 ```dart
-import 'package:result_type/result_type.dart';
+import 'package:either_result/either_result.dart';
 
 Future<Result<Failure, UserEntity>> login() async {
   try {
@@ -36,9 +36,9 @@ Not published to pub.dev. Depend on it via git:
 
 ```yaml
 dependencies:
-  result_type:
+  either_result:
     git:
-      url: https://github.com/<user>/result_type.git
+      url: https://github.com/ronipaschoal/either_result.git
       ref: v0.1.0 # tag, branch or commit
 ```
 

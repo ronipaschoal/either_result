@@ -1,4 +1,4 @@
-name: result_type
+name: either_result
 description: "Either-style Result type: typed success/failure without throwing."
 version: 0.1.0
 publish_to: 'none'

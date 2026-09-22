@@ -1,4 +1,4 @@
-import 'package:result_type/result_type.dart';
+import 'package:either_result/either_result.dart';
 import 'package:test/test.dart';
 
 void main() {

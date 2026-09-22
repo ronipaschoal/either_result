@@ -15,8 +15,10 @@
 sealed class Result<F, S> {
   const Result();
 
+  /// Whether this is a [ResultSuccess].
   bool get isSuccess => this is ResultSuccess<F, S>;
 
+  /// Whether this is a [ResultFailure].
   bool get isFailure => this is ResultFailure<F, S>;
 
   /// The success value, or `null` when this is a [ResultFailure].
@@ -75,9 +77,12 @@ sealed class Result<F, S> {
   }
 }
 
+/// A successful [Result], carrying the success [value].
 final class ResultSuccess<F, S> extends Result<F, S> {
+  /// Wraps [value] as a success.
   const ResultSuccess(this.value);
 
+  /// The success value.
   final S value;
 
   @override
@@ -92,9 +97,12 @@ final class ResultSuccess<F, S> extends Result<F, S> {
   String toString() => 'ResultSuccess($value)';
 }
 
+/// A failed [Result], carrying the failure [value].
 final class ResultFailure<F, S> extends Result<F, S> {
+  /// Wraps [value] as a failure.
   const ResultFailure(this.value);
 
+  /// The failure value.
   final F value;
 
   @override
