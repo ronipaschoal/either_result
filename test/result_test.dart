@@ -117,4 +117,30 @@ void main() {
       );
     });
   });
+
+  group('hashCode', () {
+    test('equal successes share a hashCode', () {
+      expect(
+        const ResultSuccess<String, int>(1).hashCode,
+        success.hashCode,
+      );
+    });
+
+    test('equal failures share a hashCode', () {
+      expect(
+        const ResultFailure<String, int>('boom').hashCode,
+        failure.hashCode,
+      );
+    });
+  });
+
+  group('toString', () {
+    test('describes a success', () {
+      expect(success.toString(), 'ResultSuccess(1)');
+    });
+
+    test('describes a failure', () {
+      expect(failure.toString(), 'ResultFailure(boom)');
+    });
+  });
 }
