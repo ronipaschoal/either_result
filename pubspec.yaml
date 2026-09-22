@@ -1,0 +1,11 @@
+name: result_type
+description: "Either-style Result type: typed success/failure without throwing."
+version: 0.1.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.12.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.0

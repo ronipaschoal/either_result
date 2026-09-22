@@ -1,0 +1,9 @@
+# Library package: the lock file is not committed (a consumer app's own
+# pubspec.lock is what pins versions for its build).
+pubspec.lock
+
+# Dart/Pub
+.dart_tool/
+.packages
+build/
+doc/api/
